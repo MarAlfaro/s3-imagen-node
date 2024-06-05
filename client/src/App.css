@@ -1,5 +1,112 @@
-.App {
-  text-align: center;
+/* src/App.css */
+
+/* Variables de Tema */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --form-background: #f0f0f0;
+  --button-background: #007bff;
+  --button-text-color: #ffffff;
+}
+
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --form-background: #1e1e1e;
+  --button-background: #007bff;
+  --button-text-color: #ffffff;
+}
+
+/* Global Styles */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  gap: 20px;
+  position: relative; 
+}
+
+/* Formulario */
+.form {
+  background-color: var(--form-background);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.form label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.form input[type="file"] {
+  margin-bottom: 20px;
+}
+
+.form button {
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.form button:hover {
+  background-color: #0056b3;
+}
+
+/* Imagen */
+.image {
+  max-width: 100%; 
+  height: auto; 
+  display: block; 
+  border-radius: 8px;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* Toggle de Tema */
+.theme-toggle {
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 4px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1; 
+}
+
+.theme-toggle img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Animaciones y Estilos Heredados de CRA */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .App-logo {
@@ -26,149 +133,4 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* src/App.css */
-:root {
-  --background-color: #ffffff;
-  --text-color: #000000;
-  --form-background: #f0f0f0;
-  --button-background: #007bff;
-  --button-text-color: #ffffff;
-}
-
-[data-theme="dark"] {
-  --background-color: #121212;
-  --text-color: #ffffff;
-  --form-background: #1e1e1e;
-  --button-background: #007bff;
-  --button-text-color: #ffffff;
-}
-
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  gap: 20px;
-}
-
-.form {
-  background-color: var(--form-background);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.form label {
-  font-weight: bold;
-  margin-bottom: 10px;
-  display: block;
-}
-
-.form input[type="file"] {
-  margin-bottom: 20px;
-}
-
-.form button {
-  background-color: var(--button-background);
-  color: var(--button-text-color);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.form button:hover {
-  background-color: #0056b3;
-}
-
-.image {
-  max-width: 400px;
-  max-height: 400px;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.theme-toggle {
-  cursor: pointer;
-  padding: 10px 20px;
-  background-color: var(--button-background);
-  color: var(--button-text-color);
-  border: none;
-  border-radius: 4px;
-}
-
-.container {
-  position: relative; 
-}
-
-.theme-toggle {
-  cursor: pointer;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 1; 
-}
-
-.theme-toggle img {
-  width: 24px;
-  height: 24px;
-}
-
-.image {
-  max-width: 100%; 
-  height: auto; 
-  display: block; 
-}
-
-.form {
-  background-color: var(--form-background);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  width: 100%;
-}
-
-.form label {
-  font-weight: bold;
-  margin-bottom: 10px;
-  display: block;
-}
-
-.form input[type="file"] {
-  margin-bottom: 20px;
-}
-
-.form button {
-  background-color: var(--button-background);
-  color: var(--button-text-color);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  width: 100%;
-}
-
-.form button:hover {
-  background-color: #0056b3;
 }
